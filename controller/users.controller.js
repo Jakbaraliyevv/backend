@@ -24,7 +24,7 @@ export const logincontroller = async (req, res, next) => {
     }
 
     const token = signInJwt({ id: findUser.id });
-    const resData = new ResData(200, "sucsess", [{ ...findUser, token }]);
+    const resData = new ResData(200, "sucsess", { ...findUser, token });
     await transport.sendMail({
       from: process.env.MAIL_NAME,
       to: findUser.email,
@@ -33,6 +33,38 @@ export const logincontroller = async (req, res, next) => {
     });
 
     res.status(resData.status).json(resData);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const register = (req, res, next) => {
+  try {
+    const { email, password, name, surname } = req.body;
+
+    if (!email || !password || !name || !surname) {
+      throw new CustomError(400, "Email, password, name, surname must be");
+    }
+
+    const userData = read("users");
+    const findEmail = userData.find((value) => value.email === email);
+
+    if (findEmail) {
+      throw new CustomError(409, "User already exists");
+    }
+
+    const newUser = {
+      id: userData.length ? userData.length + 1 : 1,
+      email,
+      password,
+      name,
+      surname,
+    };
+    userData.push(newUser);
+    write("users", userData);
+    res
+      .status(201)
+      .json({ message: "User registered successfully", user: newUser });
   } catch (error) {
     next(error);
   }

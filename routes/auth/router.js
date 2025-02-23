@@ -3,13 +3,14 @@ import {
   changePassword,
   forgotPassword,
   logincontroller,
+  register,
   verify,
-} from "../../controller/users.controller.js"; // ✅ TO‘G‘RI IMPORT
-
+} from "../../controller/users.controller.js";
 const router = Router();
-router.post("/sign-in", logincontroller); // ✅ ISMI TO‘G‘RI BO‘LDI
-router.post("/reset-password", forgotPassword); // ✅ ISMI TO‘G‘RI BO‘LDI
-router.post("/verify", verify); // ✅ ISMI TO‘G‘RI BO‘LDI
-router.post("/change-password", changePassword); // ✅ ISMI TO‘G‘RI BO‘LDI
+router.post("/sign-in", logincontroller);
+router.post("/sign-up", register);
+router.post("/reset-password", forgotPassword);
+router.post("/verify", verify);
+router.post("/change-password", changePassword);
 
 export { router };
