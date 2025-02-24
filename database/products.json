@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "O‘tkan kunlar",
+    "author": "Abdulla Qodiriy",
+    "year": 1926,
+    "genre": "Tarixiy roman",
+    "price": 50000,
+    "image": "https://example.com/images/otkan-kunlar.jpg",
+    "description": "O‘tkan kunlar – o‘zbek adabiyotining eng mashhur romanlaridan biri bo‘lib, unda XIX asrning oxirlaridagi Toshkent va uning atrofidagi hayot aks ettirilgan. Asarda Yusufbek hoji, Otabek, Kumush va boshqa obrazlar orqali sevgi, sadoqat, halollik va jamiyatdagi ijtimoiy tengsizlik masalalari ko‘tariladi. Muallif Abdulla Qodiriy ilk tarixiy roman yaratish orqali o‘zbek adabiyotiga katta hissa qo‘shgan. Ushbu asar bugungi kungacha ham ko‘plab o‘quvchilar tomonidan sevib o‘qiladi."
+  },
+
+  {
+    "id": 2,
+    "title": "Mehrobdan Chayon",
+    "author": "Abdulla Qahhor",
+    "year": 1958,
+    "genre": "Realistik roman",
+    "price": 45000,
+    "image": "https://example.com/images/mehrobdan-chayon.jpg",
+    "description": "Mehrobdan Chayon – Abdulla Qahhorning eng mashhur asarlaridan biri bo‘lib, unda o‘zbek jamiyatidagi urf-odatlar, eski tuzumning salbiy jihatlari va yangi hayot sari intilish tasvirlangan. Asarning asosiy qahramoni Madaminboy boylik va hokimiyat uchun hech narsadan tap tortmaydi, shu bilan birga, insoniylik tuyg‘usini yo‘qotib boradi. Ushbu roman 20-asr boshlaridagi O‘zbekistondagi ijtimoiy o‘zgarishlarni aks ettirib, o‘quvchiga insoniy qadriyatlar va hayotiy qarorlar ustida fikr yuritishga undaydi."
+  },
+
+  {
+    "id": 3,
+    "title": "Yulduzli Tunlar",
+    "author": "Pirimqul Qodirov",
+    "year": 1978,
+    "genre": "Tarixiy roman",
+    "price": 60000,
+    "image": "https://example.com/images/yulduzli-tunlar.jpg",
+    "description": "Yulduzli Tunlar – mashhur o‘zbek yozuvchisi Pirimqul Qodirov tomonidan yozilgan tarixiy roman bo‘lib, unda buyuk shoir va davlat arbobi Zahiriddin Muhammad Bobur hayoti yoritilgan. Asarda Boburning yoshlik yillari, taxt uchun kurashlari, sevimli vatanini tark etishga majbur bo‘lishi va Hindistonda buyuk imperiya barpo etishi haqida hikoya qilinadi. Ushbu asar nafaqat tarixiy voqealarni, balki insoniy tuyg‘ularni, muhabbat va fidoyilikni chuqur aks ettirgani bilan o‘quvchilarning qalbiga kirib borgan."
+  }
+]

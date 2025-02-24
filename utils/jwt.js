@@ -1,6 +1,5 @@
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
-// import { authenticator } from "otplib";
 dotenv.config();
 
 export const signInJwt = (params) => {
@@ -8,7 +7,3 @@ export const signInJwt = (params) => {
     expiresIn: "30m",
   });
 };
-// const secret = "KVKFKRCPNZQUYMLXOVYDSQKJKZDTSRLD";
-// const token = authenticator.generate(secret);
-// const isValid = authenticator.check(token, secret);
-// console.log(isValid);

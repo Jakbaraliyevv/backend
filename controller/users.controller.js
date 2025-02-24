@@ -50,7 +50,7 @@ export const register = (req, res, next) => {
     const findEmail = userData.find((value) => value.email === email);
 
     if (findEmail) {
-      throw new CustomError(409, "User already exists");
+      throw new CustomError(409, "User allaqachon mavjud");
     }
 
     const newUser = {
@@ -138,6 +138,59 @@ export const changePassword = (req, res, next) => {
 
     write("users", data);
     res.json({ message: "Parol yangilandi" });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const GetData = (req, res, next) => {
+  try {
+    const data = read("products");
+    if (!data.length) {
+      throw new CustomError(404, "Data not found");
+    }
+
+    const resData = new ResData(200, "Sucsess", data);
+    res.status(resData.status).json(resData);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const postData = (req, res, next) => {
+  try {
+    const { title, author, year, genre, price, image, description } = req.body;
+    if (
+      !title ||
+      !author ||
+      !year ||
+      !genre ||
+      !price ||
+      !image ||
+      !description
+    ) {
+      throw new CustomError(
+        400,
+        "title, author, year, genre, price, image, description must be"
+      );
+    }
+    const oldBookData = read("products");
+
+    const newBookData = {
+      id: oldBookData.length ? oldBookData.length + 1 : 1,
+      title,
+      author,
+      year,
+      genre,
+      price,
+      image,
+      description,
+    };
+    oldBookData.push(newBookData);
+    write("products", oldBookData);
+
+    const resData = new ResData(201, "Ma'lumot qo'shildi");
+    res.status(resData.status).json(resData);
   } catch (error) {
     next(error);
   }

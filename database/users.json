@@ -2,13 +2,15 @@
   {
     "id": 1,
     "email": "azizjakbaraliyev454@gmail.com",
-    "password": "1919"
+    "password": "1717",
+    "name": "Aziz",
+    "surname": "Jakbaraliyev"
   },
   {
-    "id": 2,
-    "email": "azizjakbaraliyev45@gmail.com",
-    "password": "1919",
-    "name": "ali",
-    "surname": "bek"
+    "id": 1,
+    "email": "azizjakbaraliyev454@gmail.com",
+    "password": "1717",
+    "name": "Aziz",
+    "surname": "Jakbaraliyev"
   }
 ]
